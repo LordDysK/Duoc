@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar">
+    <ion-title>
+      <span style="color: rgba(255, 183, 27, 0.962);">Duoc</span> <span
+        style="color:#012c56;">UC</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-center">
+  <div class="centered-content">
+    <img src="assets/img/camera.png" alt="Imagen 1"
+      (click)="redirigirAPagina1()">
+
+  </div>
+</ion-content>
+
+<!-- parte baja de la pag -->
+<ion-content class="ion-center">
+  <div class="centered-content">
+    <img src="assets/img/grafico.png" alt="Imagen" class="centered-image">
+  </div>
+</ion-content>
+
+<ion-footer style="text-align: center;">
+  <ion-toolbar class="ion-center">
+    <ion-button (click)="presentActionSheet()">opciones</ion-button>
+
+  </ion-toolbar>
+</ion-footer>

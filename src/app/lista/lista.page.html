@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar">
+    <ion-title>
+      <span style="color: rgba(255, 183, 27, 0.962);">Duoc</span> <span
+        style="color:#012c56;">UC</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-center">
+  <div class="button-container">
+    <img src="assets/img/image-qr.png" alt="Imagen" class="image-above-button">
+    <br><br>
+    <ion-label>wenapo vieja ql maraca</ion-label>
+    <ion-label>me pican los cocooooo</ion-label>
+
+    <ion-button [routerLink]="['/home']">generar qr</ion-button>
+  </div>
+</ion-content>
+
+<ion-footer style="text-align: center;">
+  <ion-toolbar class="ion-center">
+    <ion-button (click)="presentActionSheet()">opciones</ion-button>
+
+  </ion-toolbar>
+</ion-footer>

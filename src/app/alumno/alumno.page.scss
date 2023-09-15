@@ -1,0 +1,14 @@
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .centered-image {
+    margin-top: auto; /* Mueve la imagen hacia la parte inferior */
+    width: 75%; /* Ajusta el ancho de la imagen según tus necesidades */
+  height: auto; /* Mantiene la proporción de la imagen */
+
+}
