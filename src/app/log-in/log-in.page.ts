@@ -36,7 +36,7 @@ export class LogInPage  {
       let navigationExtras: NavigationExtras = {
         state: { user: this.user }
       }
-      this.router.navigate(['/home'], navigationExtras);
+      this.router.navigate(['/home']);
     } else {
       this.mensaje = "Debe ingresar sus credenciales";
     }
@@ -65,9 +65,9 @@ export class LogInPage  {
 
     var valorSeleccionado = this.informacion.Info;
     if (valorSeleccionado === 'Estudiante') {
-      this.router.navigate(['alumno']);
+      this.router.navigate(['/alumno']);
     } else if (valorSeleccionado === 'Docente') {
-      this.router.navigate(['home']);
+      this.router.navigate(['/home']);
     }
   }
   public informacion = {
