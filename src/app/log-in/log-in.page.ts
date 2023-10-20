@@ -16,7 +16,11 @@ export class LogInPage  {
  
   @ViewChild(IonModal) modal!: IonModal;
 
-  constructor(private router: Router, private auth: AutenticacionService) { }
+  constructor(private router: Router, private auth: AutenticacionService) {
+    this.initLOGIN()
+   }
+   initLOGIN(){
+   }
 
   public mensaje = "";
   public alertButtons = ['OK'];
@@ -57,6 +61,8 @@ export class LogInPage  {
     this.modal.dismiss(this.user.usuario, 'confirm');
   }
   enviar() {
+    this.auth.register('sexo','sexo')
+
     var valorSeleccionado = this.informacion.Info;
     if (valorSeleccionado === 'Estudiante') {
       this.router.navigate(['alumno']);
