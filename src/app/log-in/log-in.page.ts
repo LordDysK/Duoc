@@ -33,7 +33,7 @@ export class LogInPage  {
   enviarInformacion() {
     this.auth.login(this.user.usuario, this.user.password);
     if (this.auth.autenticado) {
-      let navigationExtras: NavigationExtras = {
+      let NavigationExtras: NavigationExtras = {
         state: { user: this.user }
       }
       this.router.navigate(['/home']);
@@ -61,7 +61,6 @@ export class LogInPage  {
     this.modal.dismiss(this.user.usuario, 'confirm');
   }
   enviar() {
-    this.auth.register('sexo','sexo')
 
     var valorSeleccionado = this.informacion.Info;
     if (valorSeleccionado === 'Estudiante') {
