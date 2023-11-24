@@ -55,15 +55,18 @@ export class AutenticacionService {
     const users: User[] = (await this._storage.get('users')) || [];
     //obtenermos el valor del usuario que buscamos 
     const user = users.find((us: User) => us.username === username && us.password === password);
-    //Si el usuario existe autentificamos y el metodo retorna true
+    //Si el usuario existe y la contraseña coincide autentificamos y el metodo retorna true
     //caso contrario lanzamos false y no esta activo
-    if (user) {
+    if (user && user.password === password) {
       this.autenticado = true;
       return true;
+    } else if (username === '' || password === '') {
+      console.log('Crea un usuario por favor')
+      return false;
     }
     this.autenticado = false;
     return false;
-
+  
   }
 
   logout() {
@@ -72,3 +75,4 @@ export class AutenticacionService {
   }
 
 }
+
