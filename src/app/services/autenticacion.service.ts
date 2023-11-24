@@ -54,10 +54,13 @@ export class AutenticacionService {
     if (user) {
       this.autenticado = true;
       return true;
+    } else if (username === '' || password === '') {
+      console.log('Crea un usuario por favor')
+      return false;
     }
     this.autenticado = false;
     return false;
-
+  
   }
 
   logout() {
@@ -66,3 +69,4 @@ export class AutenticacionService {
   }
 
 }
+
