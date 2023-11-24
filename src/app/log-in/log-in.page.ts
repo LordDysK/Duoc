@@ -30,17 +30,7 @@ export class LogInPage  {
     password: ""
   }
 
-  enviarInformacion() {
-    this.auth.login(this.user.usuario, this.user.password);
-    if (this.auth.autenticado) {
-      let navigationExtras: NavigationExtras = {
-        state: { user: this.user }
-      }
-      this.router.navigate(['/home']);
-    } else {
-      this.mensaje = "Debe ingresar sus credenciales";
-    }
-  }
+
 
   mostrarConsola() {
     console.log(this.user);
@@ -61,7 +51,7 @@ export class LogInPage  {
     this.modal.dismiss(this.user.usuario, 'confirm');
   }
   enviar() {
-    this.auth.register('sexo','sexo')
+    this.auth.register(this.user.usuario, this.user.password);
 
     var valorSeleccionado = this.informacion.Info;
     if (valorSeleccionado === 'Estudiante') {
@@ -73,4 +63,9 @@ export class LogInPage  {
   public informacion = {
     Info: '',
   };
+
+
+
+
+
 }
